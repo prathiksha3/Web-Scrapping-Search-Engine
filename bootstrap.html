@@ -1,0 +1,206 @@
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <!--Bootstrap navigation Start-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container-fluid">
+            <a class="navbar-brand">Samsung</a>
+          <div class="navbar-nav"></div>
+            <a href="bootstrap.html" class="nav-link active">Home</a>
+            <a href="product.html" class="nav-link">Products</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
+         </div>
+        </nav>
+        <!--Bootstrap navigation ends-->
+        <div class="container">
+            <h1>APPLICATION FORM</h1>
+            <p>
+                <i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem accusantium aliquid, quasi eveniet natus quos. Maiores officia repellendus sit dolore, beatae ipsum pariatur doloribus adipisci aspernatur quidem. Asperiores, placeat perspiciatis.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa harum, aut necessitatibus reiciendis, deserunt facilis mollitia eaque ullam accusantium illum assumenda vitae animi nulla iusto consequuntur tenetur eos perferendis! Suscipit!</i>
+            </p>
+            <form>
+                <p>
+                <label>First Name</label>
+                <input type="text" class="form-control" id="firstname">
+                <i id="errfirstname" style="color:red ;"></i>
+                </p>
+                <p>
+                <label>Country</label>
+                <select>
+                    <option>India</option>
+                    <option>Italy</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                    <option>Russia</option>
+                </select>
+                </p>
+                <p>
+                    <label>Numbers</label>
+                    <input type="number">
+                </p>
+                <p>
+                    <label>Date picker</label>
+                    <input type="date" class="form-control">
+                    </p>
+                    <p>
+                <input type="checkbox" class="form-check-input"> I agree to Terms&Condition
+                </p>
+                <p>
+                <input type="radio" class="form-check-input" name="gender">Male
+                <input type="radio" class="form-check-input" name="gender">Female
+                </p>
+                <p>
+                <button class="btn btn-danger" style="width: 100%;color: rgb(8, 8, 8);background-color: rgb(233, 140, 79);" onclick="return captureClick()">SUBMIT</button>
+                </p>
+            </form>
+
+            <!--Bootstrap Grid view End-->
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>About Movie</h4>
+                    <p>
+                        Pirates of the Caribbean is an American fantasy swashbuckler film series produced by Jerry Bruckheimer and based on Walt Disney's theme park attraction of the same name. The film series serves as a major component of the eponymous media franchise.
+                        <br>The film series started in 2003 with Pirates of the Caribbean: The Curse of the Black Pearl, which had a positive reception from audiences and film critics. It grossed US$654 million worldwide.[1] After the first film's success, Walt Disney Pictures announced that a film series was in the works. The franchise's second film, subtitled Dead Man's Chest, was released in 2006 and broke financial records worldwide the day of its premiere. Dead Man's Chest became the top-grossing movie of 2006 with almost US$1.1 billion at the worldwide box office.
+                        <br>The franchise has grossed over $4.5 billion worldwide;[1] it is the 15th-highest-grossing film series of all time, and is the first film franchise to produce two or more movies that grossed over $1 billion. 
+                    </p>
+                    </div>
+                <div class="col-lg-5 col-sm-12">
+                <img src="https://m.media-amazon.com/images/I/81D2e1rqCyL._SL1500_.jpg" alt="No internat connection" style="width:100%">
+        </div>
+        </div>
+        <!--Grid + Card-->
+        <div class="row">
+        <div class="col-lg-3">
+            <!--Product 1 start-->
+            <div class="card">
+                <img src="https://images.samsung.com/uk/smartphones/galaxy-s22-ultra/buy/02_carousel/01_group/s22_ultra_carousel_groupkv_pc.jpg?imwidth=1366?imwidth=1366" alt="No internet" style="width:100% ;">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung S22 ultra</h5>
+                    <h5 class="card-title">INR 1,29,999</h5>
+                    <p class="card text">Samsung S22 ultra with 108mp Camera</p>
+                    <button class="btn-btn-primary" style="width:100%;color: rgb(250, 250, 253);background-color: blue;">Buy Now</button>
+                </div>
+            </div> 
+            <!--Product-->
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <img src="https://img6.gadgetsnow.com/gd/images/products/additional/original/G136651_View_2/mobiles/smartphones/samsung-galaxy-s20-ultra-5g-128-gb-cosmic-grey-cosmic-black-12-gb-ram-.jpg" alt="No internet" style="width: 75px ;">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung S20 ultra</h5>
+                    <h5 class="card-title">INR 90,000</h5>
+                    <p class="card text">Samsung S20 ultra with 48mp On-Screen Camera</p>
+                    <button class="btn-btn-primary" style="width:100%;color: rgb(250, 250, 253);background-color: blue;">Buy Now</button>
+        </div>
+        </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <img src="https://images.samsung.com/is/image/samsung/assets/in/smartphones/galaxy-s22/buy/S22_BoraPurple_Carousel_ProductKV_PC.jpg?imwidth=1366" alt="No internet" style="width: 360px ;">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung S22 ultra</h5>
+                    <h5 class="card-title">INR 1,13,999</h5>
+                    <p class="card text">Samsung S22 with 108mp Camera</p>
+                    <button class="btn-btn-primary" style="width:100%;color: rgb(250, 250, 253);background-color: blue;">Buy Now</button>
+        </div>
+        </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card">
+                <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-g781bzggins/gallery/in-galaxy-s20-fe-5g-g781-sm-g781bzggins-thumb-405304982?$160_160_PNG$" alt="No internet" style="width: 120px ;">
+                <div class="card-body">
+                    <h5 class="card-title">Samsung S20 fe</h5>
+                    <h5 class="card-title">INR 45,999</h5>
+                    <p class="card text">Samsung S20 fe with 108mp Camera</p>
+                    <button class="btn-btn-primary" style="width:100%;color: rgb(250, 250, 253);background-color: blue;">Buy Now</button>
+                
+                </div> 
+            </div>
+        </div> 
+    </div>
+    <!--Grid card end-->
+    <ul class="list-group">
+        <li class="list-group-item">Charging Adapter-1</li>
+        <li class="list-group-item">Ear phones-1</li>
+        <li class="list-group-item">User manual</li>
+        <li class="list-group-item">Warranty card</li>
+        <li class="list-group-item">Sim Ejector Pin</li>
+    </ul> 
+    <br>
+    <br>
+    <table class="table">
+        <thead>
+            <tr style="background-color:rgb(107, 107, 182) ;">
+                <td><b>Serial no.</b></td>
+                <td><b>Student Name</b></td>
+                <td><b>USN</td></b>
+            </tr>
+        </thead>
+        <body>
+            <tr>
+                <td>1.</td>
+                <td>PRATHIKSHA</td>
+                <td>4SF21CD021</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>ASHIKA</td>
+                <td>4SF21RA006</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>SMITHA</td>
+                <TD>4SF21CY046</TD>
+        </body>
+    </table> 
+    <!--Bootstrap ends-->
+    <script>
+        var a=3, b=2;
+        var c=a*b;
+        if(c>6)
+        {
+            console.log("c is greater\n");
+        }
+        else
+        {
+            console.log("c is smaller\n");
+        }
+        for(var i=1;i<=10;i++)
+        {
+            console.log(i);
+        }
+        function multiply(a,b)
+        {
+            return a*b;
+        }
+        console.log(multiply(10,10));
+
+        function captureClick()
+        {
+           var firstname=document.getElementById("firstname").value;
+           if(firstname == "")
+           {
+            document.getElementById("errfirstname").innerHTML= "Please Enter First Name";
+            return false
+           }
+           else
+           {
+            document.gaetElementById("errfirstname").innerHTML= "";
+           }
+           var regx = /^[A-za-z]+$/;
+           var validFirstname = firstname.match(regx);
+
+           if(!validFirstname)
+           {
+            document.getElementById("errfirstname").innerHTML = "Please enter a valid name";
+            return false;
+           }
+        }
+     </script>         
+     </body>
+</html>

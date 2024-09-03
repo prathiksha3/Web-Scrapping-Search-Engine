@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stored Scraped Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 40px;
+            background-color: darkblue;
+            color: white;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-align: left;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .logout-button, .download-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+        .logout-button:hover {
+            background-color: #45a049;
+        }
+
+        .download-button {
+            background-color: #2196F3;
+        }
+
+        .download-button:hover {
+            background-color: #0b79d0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stored Scraped Data</h1>
+    <button class="logout-button" onclick="window.location.href='/'">Logout</button>
+    <button class="download-button" onclick="downloadCSV()">Download CSV</button>
+
+    <div class="container">
+        <table id="dataTable">
+            <tr>
+                <th>URL</th>
+                <th>Email Addresses</th>
+                <th>Mobile Numbers</th>
+                <th>Social Media Links</th>
+            </tr>
+            {% for data in scraped_data %}
+            <tr>
+                <td>{{ data.url }}</td>
+                <td>
+                    <ul>
+                        {% for email in data.emails %}
+                            <li>{{ email }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        {% for mobile in data.mobiles %}
+                            <li>{{ mobile }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+                <td>
+                    <ul>
+                        {% for link in data.social_links %}
+                            <li><a href="{{ link }}" target="_blank">{{ link }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <script>
+        function downloadCSV() {
+            const rows = [];
+            const table = document.getElementById('dataTable');
+
+            // Extract table headers
+            const headers = Array.from(table.querySelectorAll('th')).map(th => th.innerText);
+            rows.push(headers.join(','));
+
+            // Extract table rows
+            table.querySelectorAll('tr').forEach((tr, index) => {
+                if (index > 0) { // Skip the header row
+                    const cells = Array.from(tr.querySelectorAll('td')).map(td => {
+                        // Extract text from lists
+                        const listItems = Array.from(td.querySelectorAll('ul li')).map(li => li.innerText).join('; ');
+                        return `"${listItems.replace(/"/g, '""')}"`; // Wrap text with quotes and escape internal quotes
+                    });
+                    rows.push(cells.join(','));
+                }
+            });
+
+            // Convert rows to CSV format
+            const csvContent = "data:text/csv;charset=utf-8," + rows.join("\n");
+
+            // Create a link and trigger download
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement("a");
+            link.setAttribute("href", encodedUri);
+            link.setAttribute("download", "scraped_data.csv");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
