@@ -63,5 +63,7 @@ After logging in as an admin, you can view the scraped data on the dashboard.
 
 # API Endpoints
 /login: Admin login route.
+
 /scrape: Scrape data from a user-provided URL.
+
 /user: Admin dashboard for viewing all scraped data.
